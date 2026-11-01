@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-task',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   templateUrl: './list-task.html',
   styleUrl: './list-task.scss',
 })
-export class ListTask {
 
+export class ListTask {
+  @Input() tareas: string[] = []; //Lista de tareas recibidas desde el componente padre
 }

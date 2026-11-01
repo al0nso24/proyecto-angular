@@ -7,7 +7,7 @@ import { interval } from 'rxjs';
   standalone: false,
   styleUrl: './app.scss'
 })
-export class App implements DoCheck {
+export class App {
   // ngAfterViewInit(): void {
   //   console.log("Creandose desde AfterViewInit");
   // }
@@ -26,22 +26,27 @@ export class App implements DoCheck {
   //   }, 1000)
   // }
 
-  value = 0;
-  previousValue = 0;
-  changeDetected = false;
+  // value = 0;
+  // previousValue = 0;
+  // changeDetected = false;
 
-  updateValue() {
-    this.value++;
-    setInterval(() => {
-      this.changeDetected = false;
-    }, 2000)
-  }
+  // updateValue() {
+  //   this.value++;
+  //   setInterval(() => {
+  //     this.changeDetected = false;
+  //   }, 2000)
+  // }
 
-  ngDoCheck(): void {
-    if(this.previousValue != this.value){
-      this.changeDetected = true; //captura el cambio
-      console.log("Cambio detectado");
-      this.previousValue = this.value;
-    }
+  // ngDoCheck(): void {
+  //   if(this.previousValue != this.value){
+  //     this.changeDetected = true; //captura el cambio
+  //     console.log("Cambio detectado");
+  //     this.previousValue = this.value;
+  //   }
+  // }
+
+  tareas: string[] = [];
+  agregarTarea(tarea: string) {
+    this.tareas = [...this.tareas, tarea];
   }
 }
