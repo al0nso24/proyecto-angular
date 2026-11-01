@@ -5,10 +5,10 @@
     <h2>Componente hijo</h2>
     <ng-content></ng-content>
 </div> -->
-
+<h2 id="titulo">Agregar Tarea:</h2>
 <div class="contenedor">
     <!--#tarea = referencia local-->
-    <input #tarea type="text" placeholder="Nueva tarea" />
+    <input id="inputTarea" #tarea type="text" placeholder="Nueva tarea" />
     <button class="btnAgregar" 
     type="button" 
     (click)="agregarTarea(tarea.value); 
