@@ -1,3 +1,11 @@
-<app-addTask></app-addTask>
+<app-addTask>
+    <p>Este es el componente que quiero mostrar dentro de add-component</p>
+    <button>Presionar</button>
+</app-addTask>
 <app-list-task></app-list-task>
+<div>
+    <p>Valor actual: {{value}}</p>
+    <p *ngIf="changeDetected">Cambio detectado</p>
+    <button (click)="updateValue()">Actualizar valor</button>
+</div>
 <router-outlet />
