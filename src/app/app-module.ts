@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { AddComponent } from './components/addTask/add.component';
 import { ListTask } from './components/list-task/list-task';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListTask } from './components/list-task/list-task';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AddComponent
+    AddComponent,
+    FormsModule
 ],
   providers: [
     provideBrowserGlobalErrorListeners(),

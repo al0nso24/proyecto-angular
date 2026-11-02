@@ -1,23 +1,26 @@
-.btnAgregar{
-    background-color: purple;
-    color: white;
-    cursor: pointer;
-    border: 1px solid purple;
-    border-radius: 9px;
-    font-weight: bold;
-    padding: 5px;
-}
-
-#titulo{
-    font-weight: bold; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contenedor{
+.container_input{
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
     display: flex;
-    gap:10px
-}
+    align-items: center;
+    justify-content: center;
 
-#inputTarea{
-    border-radius: 10px;
+    input{
+        width: 50%;
+        border: 1px solid #ccc;
+        padding: 10px;
+        outline: none;
+    }
+
+    button{
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        color: black;
+        cursor: pointer;
+    }
 }
