@@ -11,7 +11,7 @@ import { FormsModule } from "@angular/forms"; //crea un objeto con los datos del
 
 export class AddComponent {
     numberTask: number = 10;
-    titleTask: string = "";
+    titleTask: string = ""; //empieza vacío para que el usuario ingrese la tarea
     activeButton: boolean = true;
 
     sendTask(){
