@@ -1,7 +1,7 @@
 <h1>Número de tareas: {{numberTask}}</h1>
 <span>Título tarea: {{titleTask}}</span>
 
-<p *ngIf="myInput.invalid && (myInput.dirty || myInput.touched)">
+<!-- <p *ngIf="myInput.invalid && (myInput.dirty || myInput.touched)">
     <span *ngIf="myInput.errors?.['required']">Este campo es obligatorio</span>
 </p>
 
@@ -16,4 +16,10 @@
     <button type="submit" [disabled]="!myInput.valid">Ingresar tarea</button>
 </form>
 
-{{myInput.valid}}
+{{myInput.valid}} -->
+
+<form class="container_input">
+    <input type="text" placeholder="Ingresar tarea"
+    >
+    <button type="submit">Ingresar tarea</button>
+</form>

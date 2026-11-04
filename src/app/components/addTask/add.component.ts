@@ -1,6 +1,9 @@
 import {Component} from "@angular/core"
 import { AppRoutingModule } from "../../app-routing-module";
-import { FormsModule, NgForm } from "@angular/forms";
+//FormBuilder = crea un formulario
+//FormGroup = agrupa los elementos del formulario
+//FormControl = individualmente para cada elemento
+import { FormsModule, NgForm, FormBuilder, FormGroup, FormControl } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser"; //crea un objeto con los datos del componente
 
 @Component({
