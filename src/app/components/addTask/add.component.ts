@@ -29,6 +29,12 @@ export class AddComponent implements OnInit {
         })
     }
 
+    sendTaskTitle(): void{
+        if(this.form.valid){
+            console.log(this.form.value.title);
+        }
+    }
+
 
 
 
