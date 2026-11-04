@@ -3,14 +3,14 @@ import { AppRoutingModule } from "../../app-routing-module";
 //FormBuilder = crea un formulario
 //FormGroup = agrupa los elementos del formulario
 //FormControl = individualmente para cada elemento
-import { FormsModule, NgForm, FormBuilder, FormGroup, FormControl, Validators } from "@angular/forms";
+import { FormsModule, NgForm, FormBuilder, FormGroup, FormControl, Validators, ReactiveFormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser"; //crea un objeto con los datos del componente
 
 @Component({
     selector: "app-addTask", //nombre del componente
     templateUrl: "./add.component.html", //vista del componente
     styleUrl: "./add.component.scss", //estilos
-    imports: [AppRoutingModule, FormsModule, BrowserModule]
+    imports: [AppRoutingModule, FormsModule, BrowserModule, ReactiveFormsModule]
 })
 
 export class AddComponent implements OnInit {
@@ -24,14 +24,14 @@ export class AddComponent implements OnInit {
     ngOnInit(): void {
         this.form = this.fb.group({
             //El formulario empieza vacío y necesita un valor para ser enviado
-            //maxLength = 50 caracteres
-            title: new FormControl("", [Validators.required , Validators.maxLength(50)])
+            //maxLength = 10 caracteres
+            title: new FormControl("", [Validators.required , Validators.maxLength(10)])
         })
     }
 
     sendTaskTitle(): void{
         if(this.form.valid){
-            console.log(this.form.value.title);
+            console.log(this.form.value.title); //titulo de la tarea
         }
     }
 
