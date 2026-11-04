@@ -1,6 +1,11 @@
 <h1>Número de tareas: {{numberTask}}</h1>
 <span>Título tarea: {{titleTask}}</span>
 
+<p *ngIf="myInput.invalid && (myInput.dirty || myInput.touched)">
+    <span *ngIf="myInput.errors?.['required']">Este campo es obligatorio</span>
+</p>
+
+
 <form class="container_input" #myForm="ngForm" (ngSubmit)="sendData(myForm)">
     <input type="text" placeholder="Ingresar tarea..." 
     [(ngModel)]="titleTask"

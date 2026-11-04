@@ -1,12 +1,13 @@
 import {Component} from "@angular/core"
 import { AppRoutingModule } from "../../app-routing-module";
-import { FormsModule, NgForm } from "@angular/forms"; //crea un objeto con los datos del componente
+import { FormsModule, NgForm } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser"; //crea un objeto con los datos del componente
 
 @Component({
     selector: "app-addTask", //nombre del componente
     templateUrl: "./add.component.html", //vista del componente
     styleUrl: "./add.component.scss", //estilos
-    imports: [AppRoutingModule, FormsModule]
+    imports: [AppRoutingModule, FormsModule, BrowserModule]
 })
 
 export class AddComponent {
