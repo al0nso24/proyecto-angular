@@ -18,10 +18,13 @@
 
 {{myInput.valid}} -->
 
+<!-- Mensajes de validación de errores -->
 <div *ngIf="form.get('title')?.invalid && (form.get('title')?.dirty || form.get('title')?.touched)">
+    <!-- Error que indica que la tarea es requerida -->
     <small *ngIf="form.get('title')?.errors?.['required']">
         El título es requerido
     </small>
+    <!-- Error que indica el límite de caracteres del nombre de la tarea -->
     <small *ngIf="form.get('title')?.errors?.['maxlength']">
         El máximo de caracteres es de 10
     </small>
