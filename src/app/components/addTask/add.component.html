@@ -1,5 +1,5 @@
 <h1>Número de tareas: {{numberTask}}</h1>
-<span>Título tarea: {{titleTask}}</span>
+<span>Título tarea: {{form.get("title")?.value}}</span> <!-- Mostrar el valor de la tarea -->
 
 <!-- <p *ngIf="myInput.invalid && (myInput.dirty || myInput.touched)">
     <span *ngIf="myInput.errors?.['required']">Este campo es obligatorio</span>
