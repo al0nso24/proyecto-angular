@@ -14,10 +14,8 @@ import { BrowserModule } from "@angular/platform-browser"; //crea un objeto con 
 })
 
 export class AddComponent implements OnInit {
-
-    constructor(private fb: FormBuilder){
-
-    }
+    //Inyecta FormBuilder en el constructor para poder usarlo
+    constructor(private fb: FormBuilder){}
 
     form!: FormGroup;
 
