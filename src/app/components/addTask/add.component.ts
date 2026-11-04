@@ -17,16 +17,17 @@ export class AddComponent implements OnInit {
     //Inyecta FormBuilder en el constructor para poder usarlo
     constructor(private fb: FormBuilder){}
 
-    form!: FormGroup;
+    form!: FormGroup; //grupo de controles para el formulario
 
     ngOnInit(): void {
         this.form = this.fb.group({
             //El formulario empieza vacío y necesita un valor para ser enviado
-            //maxLength = 10 caracteres
+            //maxLength = 10 caracteres como máximo
             title: new FormControl("", [Validators.required , Validators.maxLength(10)])
         })
     }
 
+    //Función que envía el formulario
     sendTaskTitle(): void{
         if(this.form.valid){
             console.log(this.form.value.title); //titulo de la tarea
