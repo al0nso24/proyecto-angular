@@ -1,6 +1,6 @@
 import {Component} from "@angular/core"
 import { AppRoutingModule } from "../../app-routing-module";
-import { FormsModule } from "@angular/forms"; //crea un objeto con los datos del componente
+import { FormsModule, NgForm } from "@angular/forms"; //crea un objeto con los datos del componente
 
 @Component({
     selector: "app-addTask", //nombre del componente
@@ -13,6 +13,12 @@ export class AddComponent {
     numberTask: number = 10;
     titleTask: string = ""; //empieza vacío para que el usuario ingrese la tarea
     activeButton: boolean = true;
+
+    sendData(form: NgForm){
+        if(form.valid){
+            console.log(this.titleTask);
+        }
+    }
 
     sendTask(){
         const sizeTask = this.titleTask.trim().split(""); //convierte un string en un array
